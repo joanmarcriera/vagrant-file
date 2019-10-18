@@ -1,15 +1,22 @@
 # vagrant-file
 
 
-This Vagrant file has been created using [[ centos7 | ``https://app.vagrantup.com/centos/boxes/7``]] as template .
+This Vagrant file has been created using [ centos7 ](https://app.vagrantup.com/centos/boxes/7) as template .
 
 
 1) You will need virtualbox installed on your computer.
 2) Clone this repository on your computer
+```bash
+$ git clone https://github.com/joanmarcriera/vagrant-file
+```
 3) Run ` vagrant up` .
+```bash
+$ cd vagrant-file
+$ vagrant up
+```
 
 
-Port 8080 of your machine will provide access to port 80 no Vagrant running installation, if that port is already used on your machine feel free to use any other port but changing the Vagrant file and running `vagrant destroy`. 
+Inside the Vagrant file you can see that port 8080 of your machine will provide access to port 80 inside the Vagrant running OS, if that port is already used on your machine feel free to use any other port by changing the Vagrant file and running `vagrant destroy` before running `vagrant up` again. 
 
 
 # How to test if the environment is configured correctly.
@@ -23,6 +30,7 @@ After `vagrant up` you should be able to `vagrant ssh`
 [vagrant@localhost ~]$ sudo su -
 Last login: DATE REDACTED
 ```
+
 
 You can now ensure docker is installed correctly by running the hello-world example.
 
@@ -71,6 +79,5 @@ $ [root@localhost flask-app]# docker build -t super_api .
 $ [root@localhost flask-app]# docker run -p 80:5000 --name myapp super_api
 ```
 
-And my super_api runs on port 5000 as a docker container, providing access to the Vagrant system on port 80, and Vagrant is providing access to such port to our external OS on port 8080. We will test your solution from that point onwards following your instructions. 
-
+And my super_api runs on port 5000 as a docker container, providing access to the Vagrant system on port 80, and Vagrant is providing access to such port to our external OS on port 8080. We will test your solution from that point onwards following your instructions.
 
