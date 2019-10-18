@@ -57,19 +57,19 @@ For more examples and ideas, visit:
  https://docs.docker.com/get-started/
 
 [root@localhost ~]#
-`
+```
 
 # Your code will be tested from here by cloning the repository and using docker to build its container.
 
 From here onwards we will follow your instructions provided on your README file.
 
 As an example we are looking for something like this as deliverable.
-`bash
+```bash
 $ git clone https://github.com/docker/labs
 $ cd labs/beginner/flask-app/
 $ [root@localhost flask-app]# docker build -t super_api .
 $ [root@localhost flask-app]# docker run -p 80:5000 --name myapp super_api
-`
+```
 
 And my super_api runs on port 5000 as a docker container, providing access to the Vagrant system on port 80, and Vagrant is providing access to such port to our external OS on port 8080. We will test your solution from that point onwards following your instructions. 
 
