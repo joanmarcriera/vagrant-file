@@ -1,8 +1,8 @@
 # vagrant-file
 
 
-This Vagrant file has been created using [[ centos7 ]] as template .
-``https://app.vagrantup.com/centos/boxes/7``
+This Vagrant file has been created using [[ centos7 | ``https://app.vagrantup.com/centos/boxes/7``]] as template .
+
 
 1) You will need virtualbox installed on your computer.
 2) Clone this repository on your computer
@@ -16,17 +16,17 @@ Port 8080 of your machine will provide access to port 80 no Vagrant running inst
 
 After `vagrant up` you should be able to `vagrant ssh` 
 
-`bash
+```bash
 
 ✔ ~/my_repos/vagrant-file [master|✚ 1…11]
 12:36 $ vagrant ssh
 [vagrant@localhost ~]$ sudo su -
 Last login: DATE REDACTED
-`
+```
 
 You can now ensure docker is installed correctly by running the hello-world example.
 
-`bash
+```bash
 [root@localhost ~]# docker run hello-world
 Unable to find image 'hello-world:latest' locally
 Trying to pull repository docker.io/library/hello-world ...
